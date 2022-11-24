@@ -6,6 +6,10 @@ export default async function demo(fastify: FastifyInstance) {
   });
 
   fastify.post("/", async (request: FastifyRequest, reply: FastifyReply) => {
+    const body: any = request.body;
+    const username = body.username;
+    const password = body.password;
+
     reply.send("Demo routing port mathod");
   });
 
